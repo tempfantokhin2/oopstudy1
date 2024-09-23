@@ -8,6 +8,10 @@ import java.util.Arrays;
 public class Tringle {
     Dot[] point;
 
+    //practice *complex operations*
+    double perimeter;
+    boolean perimeterCalculated;
+
     @Override
     public String toString() {
         return "Tringle{" +
@@ -22,6 +26,8 @@ public class Tringle {
         this.point[0] = point1;
         this.point[1] = point2;
         this.point[2] = point3;
+
+        perimeterCalculated = false;
     }
 
     public boolean isRectangular() {
@@ -56,11 +62,15 @@ public class Tringle {
         return (ax * bx + ay * by) == 0;
     }
 
-
+    //practice *complex operations*
     public double getPerimeter(){
-        //NOT TESTED
-        return point[0].distanceTo(point[1]) +
-                point[1].distanceTo(point[2]) +
-                point[2].distanceTo(point[0]);
+        if(!perimeterCalculated) {
+            double ab = this.point[0].distanceTo(this.point[1]);
+            double bc = this.point[1].distanceTo(this.point[2]);
+            double ca = this.point[2].distanceTo(this.point[0]);
+            perimeter = ab + bc + ca;
+            perimeterCalculated = true;
+        }
+        return perimeter;
     }
 }
