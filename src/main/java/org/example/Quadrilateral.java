@@ -12,6 +12,16 @@ public class Quadrilateral {
     }
 
     public boolean isRectangle() {
-        return false;
+        return isParallel(point[0], point[1], point[2], point[3]) &&
+                isParallel(point[0], point[2], point[1], point[3]);
+    }
+
+    private boolean isParallel(Dot a, Dot b, Dot c, Dot d) {
+        double ax = a.x - b.x;
+        double ay = a.y - b.y;
+        double bx = c.x - d.x;
+        double by = c.y - d.y;
+
+        return (ax * bx + ay * by) == 0;
     }
 }

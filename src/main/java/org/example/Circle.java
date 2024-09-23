@@ -9,11 +9,11 @@ public class Circle {
         this.radius = radius;
     }
 
-    public int getLength(){
-        return 0;
+    public double getLength(){
+        return Math.PI * 2 * radius;
     }
 
-    public int getArea(){
-        return 0;
+    public double getArea(){
+        return Math.PI * radius * radius;
     }
 }

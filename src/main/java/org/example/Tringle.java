@@ -11,14 +11,34 @@ public class Tringle {
     }
 
     public boolean isRectangular() {
-        return false;
+        // Check if three sides form a right angle
+        return isRightAngle(point[0], point[1], point[2]) ||
+                isRightAngle(point[0], point[2], point[1]) ||
+                isRightAngle(point[1], point[2], point[0]);
     }
 
     public boolean isIsosceles() {
-        return false;
+        // Check if two sides are equal
+        return (point[0].distanceTo(point[1]) == point[1].distanceTo(point[2])) ||
+                (point[0].distanceTo(point[2]) == point[1].distanceTo(point[2])) ||
+                (point[0].distanceTo(point[2]) == point[1].distanceTo(point[0]));
     }
 
     public boolean isEquilateral() {
-        return false;
+        // Check if all three sides are equal
+        return point[0].distanceTo(point[1]) == point[1].distanceTo(point[2]) &&
+                point[0].distanceTo(point[2]) == point[1].distanceTo(point[0]) &&
+                point[0].distanceTo(point[2]) == point[1].distanceTo(point[0]);
+    }
+
+    private boolean isRightAngle(Dot a, Dot b, Dot c) {
+        // Calculate vectors
+        double ax = a.x - b.x;
+        double ay = a.y - b.y;
+        double bx = b.x - c.x;
+        double by = b.y - c.y;
+
+        // Check if dot product equals zero
+        return (ax * bx + ay * by) == 0;
     }
 }
