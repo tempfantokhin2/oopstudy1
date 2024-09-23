@@ -3,7 +3,7 @@ package org.example;
 /**
  * Represents a circle with a center point and radius.
  */
-public class Circle {
+public class Circle extends Shape {
     Dot center;
     double radius;
 
@@ -29,6 +29,11 @@ public class Circle {
         return Math.PI * 2 * radius;
     }
 
+    @Override
+    double getPerimeter() {
+        return getLength();
+    }
+
     public double getArea(){
         return Math.PI * radius * radius;
     }
@@ -42,4 +47,5 @@ public class Circle {
         //this oneliner can be used instead of the if-else above but is hard to comprehend
         //return !(dist > this.radius + b.radius) && !(dist + this.radius < b.radius) && !(dist + b.radius < this.radius);
     }
+
 }
