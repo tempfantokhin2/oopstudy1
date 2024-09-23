@@ -55,4 +55,12 @@ public class Tringle {
         // Check if dot product equals zero
         return (ax * bx + ay * by) == 0;
     }
+
+
+    public double getPerimeter(){
+        //NOT TESTED
+        return point[0].distanceTo(point[1]) +
+                point[1].distanceTo(point[2]) +
+                point[2].distanceTo(point[0]);
+    }
 }
