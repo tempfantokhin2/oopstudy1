@@ -1,7 +1,21 @@
 package org.example;
 
+import java.util.Arrays;
+
+/**
+ * Represents a tringle with two points.
+ */
 public class Tringle {
     Dot[] point;
+
+    @Override
+    public String toString() {
+        return "Tringle{" +
+                "(" + point[0] + "), " +
+                "(" + point[1] + "), " +
+                "(" + point[2] + ")" +
+                '}';
+    }
 
     public Tringle(Dot point1, Dot point2, Dot point3) {
         this.point = new Dot[3];

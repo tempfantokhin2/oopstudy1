@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ * Represents a quadrilateral with four points.
+ */
 public class Quadrilateral {
     Dot[] point;
 

@@ -6,7 +6,15 @@ public class Dot {
     double x;
     double y;
 
-    public Dot(double y, double x) {
+    @Override
+    public String toString() {
+        return "Dot{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
+
+    public Dot(double x, double y) {
         this.y = y;
         this.x = x;
     }
