@@ -4,8 +4,6 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-
-        //System.out.println("Hello world!");
         example1();
     }
 
@@ -26,5 +24,14 @@ public class Main {
 
         Tringle pif = new Tringle(zero, new Dot(4, 0), new Dot(0, 3));
         System.out.println("pif = " + pif);
+
+        System.out.println(circ3.getArea());
+
+        Circle cZ = new Circle(zero, 50);
+        Circle cQ = new Circle(pointQ, 45);
+        System.out.println(cQ + "пересекаеться с " + cZ + ": " + cQ.intersectsWith(cZ));
+        Circle cP = new Circle(new Dot(80, 0), 40);
+        System.out.println(cP + "пересекаеться с " + cZ + ": " + cP.intersectsWith(cZ));
+
     }
 }
