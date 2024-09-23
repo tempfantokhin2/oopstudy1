@@ -3,7 +3,7 @@ package org.example;
 /**
  * Represents a quadrilateral with four points.
  */
-public class Quadrilateral {
+public class Quadrilateral extends Shape {
     Dot[] point;
 
     public Quadrilateral(Dot point1, Dot point2, Dot point3, Dot point4) {
@@ -26,5 +26,17 @@ public class Quadrilateral {
         double by = c.y - d.y;
 
         return (ax * bx + ay * by) == 0;
+    }
+
+    @Override
+    double getPerimeter() {
+        //TODO
+        return 0;
+    }
+
+    @Override
+    double getArea() {
+        //TODO
+        return 0;
     }
 }

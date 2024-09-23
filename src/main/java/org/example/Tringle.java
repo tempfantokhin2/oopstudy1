@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Represents a tringle with two points.
  */
-public class Tringle {
+public class Tringle extends Shape {
     Dot[] point;
 
     //practice *complex operations*
@@ -72,5 +72,11 @@ public class Tringle {
             perimeterCalculated = true;
         }
         return perimeter;
+    }
+
+    @Override
+    double getArea() {
+        //TODO
+        return 0;
     }
 }
