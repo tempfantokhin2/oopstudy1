@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-        example1();
+        example2();
     }
 
     public static void example1() {
@@ -26,12 +26,17 @@ public class Main {
         System.out.println("pif = " + pif);
 
         System.out.println(circ3.getArea());
+    }
 
+    public static void example2() {
+        Dot zero = new Dot(0, 0);
+        Dot pointQ = new Dot(100, 0);
+        //...
         Circle cZ = new Circle(zero, 50);
         Circle cQ = new Circle(pointQ, 45);
         System.out.println(cQ + "пересекаеться с " + cZ + ": " + cQ.intersectsWith(cZ));
         Circle cP = new Circle(new Dot(80, 0), 40);
         System.out.println(cP + "пересекаеться с " + cZ + ": " + cP.intersectsWith(cZ));
-
+        //...
     }
 }
